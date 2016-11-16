@@ -1,0 +1,26 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"All Autocomplete",
+		"Babel",
+		"Babel Snippets",
+		"Djaneiro",
+		"Dotfiles Syntax Highlighting",
+		"Material Theme",
+		"Package Control",
+		"PackageResourceViewer",
+		"PowerShell",
+		"Python Flake8 Lint",
+		"react-native-snippets",
+		"SCSS",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-standard"
+	]
+}

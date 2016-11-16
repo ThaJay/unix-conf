@@ -1,0 +1,4 @@
+[
+    { "keys": ["ctrl+m", "ctrl+m"], "command": "toggle_minimap" },
+    {"keys": ["alt+m"], "command": "toggle_menu"}
+]

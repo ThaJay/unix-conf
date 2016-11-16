@@ -1,0 +1,12 @@
+[user]
+	email = dj@intoparty.com
+	name = DJ
+[push]
+	default = simple
+[alias]
+	update = !git pull && git submodule update --init --recursive --remote --merge
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+  editor = 'subl' --wait
