@@ -85,10 +85,6 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-shopt -s globstar
-
 # Disable the bell
 set bell-style none
 
@@ -117,6 +113,11 @@ if [[ $OSTYPE == linux* ]]; then
         "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d'\
         | xargs sudo apt-get -y purge"
 
+fi
+
+# OS X specific settings
+if [[ $OSTYPE == darwin* ]]; then
+    export CLICOLOR=1
 fi
 
 # Global aliases
