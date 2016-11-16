@@ -1,4 +1,4 @@
-# Unix-conf
+# unix-conf
 My config files + init script
 
 - clone this repo
