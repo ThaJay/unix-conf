@@ -28,6 +28,8 @@ alias itp='ssh itp_dj@dev1.intoparty.com'
 alias ssh-add='eval $(ssh-agent) && ssh-add'
 alias gstat='git status'
 alias wip="git commit -a -m 'wip' && git push"
+alias gamend="git add --all && git commit --amend"
+alias freset="git fetch && git reset --hard origin/new-visitor-list"
 
 actenv() {
     cur_working_dir=$(pwd)
