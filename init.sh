@@ -1,7 +1,7 @@
+mv ~/.config/sublime-text-3/Packages/User/ ~/.config/sublime-text-3/Packages/User.old/
 mv ~/.bash_aliases ~/.bash_aliases.old
 mv ~/.bash_profile ~/.bash_profile.old
 mv ~/.bashrc ~/.bashrc.old
-mv ~/.config/ ~/.config/.old
 mv ~/.gitconfig ~/.gitconfig.old
 mv ~/.gitignore ~/.gitignore.old
 mv ~/.profile ~/.profile.old
