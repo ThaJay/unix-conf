@@ -74,9 +74,16 @@ export PATH=$PATH:$HOME/bin
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 
-# Set the default editor to sublime-text
-export EDITOR=vim
-export VISUAL=vim
+# Set the default editor to sublime-text if available
+if hash subl 2>/dev/null; then
+    printf "setting subl as default editor\n"
+    export EDITOR=subl
+    export VISUAL=subl
+else
+    printf "setting vim as default editor\n"
+    export EDITOR=vim
+    export VISUAL=vim
+fi
 
 # Don't put duplicate lines or lines starting with space in the history
 export HISTCONTROL=ignoreboth
@@ -247,6 +254,10 @@ diff-last-commit() {
     fi
 }
 
+
+# alias gamend="git add --all && git commit --amend"
+alias gamend="git commit -a --amend && git push -f"
+alias freset="git fetch && git reset --hard origin/\$(_current_branch_name)"
 
 
 # Make the prompt blue, bold, display the current path and the current branch
