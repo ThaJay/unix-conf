@@ -147,12 +147,8 @@ export ANDROID_HOME=/opt/android-sdk-linux
 export JAVA_HOME="$HOME/opt/jdk1.8.0_102/"
 export PATH="$HOME/opt/jdk1.8.0_102/bin:$HOME/opt/android-sdk-linux/tools:$HOME/opt/android-sdk-linux/platform-tools:$PATH"
 
-
-
-
 # Git
 
-# Set branch name in prompt
 _has_commits() {
     if git rev-parse --verify HEAD > /dev/null 2>&1; then
         return 0
@@ -168,70 +164,6 @@ _current_branch_name() {
         echo "master"
     fi
 }
-
-_current_remote() {
-    remote=$(git config --get branch.$(_current_branch_name).remote)
-    if [ -n $remote ]; then
-        remote=origin
-    fi
-    echo $remote
-}
-
-_current_remote_url() {
-    git config --get remote.$(_current_remote).url
-}
-
-_current_repos_name() {
-    if _has_commits ; then
-        _current_remote_url | sed 's/^.*\/\(..*\)\.git/\1/'
-    else
-        echo "unknown"
-    fi
-}
-
-_state() {
-    if _has_commits ; then
-        if ! git diff --quiet 2> /dev/null ; then
-            echo "not-staged"
-        elif ! git diff --staged --quiet 2> /dev/null ; then
-            echo "not-committed"
-        elif ! git diff origin/$(_current_branch_name) --quiet 2> /dev/null ; then
-            echo "not-pushed"
-        else
-            echo "clean"
-        fi
-    else
-        echo "not-initialized"
-    fi
-}
-
-_activate_branch_color() {
-    state=$(_state)
-    if [[ $state == "not-initialized" ]] ; then
-        tput setaf 7
-    elif [[ $state == "not-staged" ]] ; then
-        tput setaf 1
-    elif [[ $state == "not-committed" ]] ; then
-        tput setaf 3
-    elif [[ $state == "not-pushed" ]] ; then
-        tput setaf 6
-    else
-        tput setaf 2
-    fi
-}
-
-_stash_indicator() {
-    stash_count=$(git stash list | wc -l | sed 's/ //g')
-    if [[ $stash_count -gt 0 ]] ; then
-        echo " - $(tput setaf 1)$stash_count$(tput setaf 4)"
-    fi
-}
-
-# Short alias for git stuff
-alias g=git
-
-# Make autocomplete also work fo the `g` alias
-eval $(complete -p git | sed 's/git$/g/g')
 
 # Add some handy custom commands
 last-commit-hash() { # Shows the hash of the previous commit for the given file
@@ -254,11 +186,9 @@ diff-last-commit() {
     fi
 }
 
-
 # alias gamend="git add --all && git commit --amend"
 alias gamend="git commit -a --amend && git push -f"
 alias freset="git fetch && git reset --hard origin/\$(_current_branch_name)"
-
 
 # Make the prompt blue, bold, display the current path and the current branch
 export PS1="\
@@ -275,12 +205,7 @@ export PS1="\
 \w\
 \[$(tput sgr0)\]\
 \[$(tput setaf 5)\]\
- (\
-\[\$(_activate_branch_color)\]\
-\$(_current_branch_name)\
-\$(_stash_indicator)\
-\[$(tput setaf 5)\]\
-)\
+\$(__git_ps1)\
 \[$(tput setaf 4)\]\
 \[$(tput bold)\]\
  \$ \
