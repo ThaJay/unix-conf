@@ -554,8 +554,8 @@
 			<string>text.html.markdown markup.raw.inline</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#65737e</string>
+				<key>foreground</key>
+				<string>#C792EA</string>
 			</dict>
 		</dict>
 		<dict>
@@ -565,10 +565,8 @@
 			<string>text.html.markdown punctuation.definition.raw.markdown</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#65737e</string>
 				<key>foreground</key>
-				<string>#000000</string>
+				<string>#65737e</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1008,6 +1006,16 @@
 		</dict>
 	<dict>
             <key>name</key>
+            <string>Python Flake8 Lint Gutter Mark</string>
+            <key>scope</key>
+            <string>flake8lint.mark.gutter</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFFFFF</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
             <string>Python Flake8 Lint Warning</string>
             <key>scope</key>
             <string>flake8lint.mark.warning</string>
@@ -1025,16 +1033,6 @@
             <dict>
                 <key>foreground</key>
                 <string>#981600</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
-            <string>Python Flake8 Lint Gutter Mark</string>
-            <key>scope</key>
-            <string>flake8lint.mark.gutter</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#FFFFFF</string>
             </dict>
         </dict><dict>
             <key>name</key>

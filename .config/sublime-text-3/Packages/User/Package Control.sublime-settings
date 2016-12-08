@@ -10,6 +10,7 @@
 		"Babel",
 		"Babel Snippets",
 		"Djaneiro",
+		"Dockerfile Syntax Highlighting",
 		"Dotfiles Syntax Highlighting",
 		"Material Theme",
 		"Package Control",
@@ -21,6 +22,7 @@
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-contrib-standard"
+		"SublimeLinter-contrib-standard",
+		"zz File Icons"
 	]
 }

@@ -373,6 +373,16 @@
             </dict>
         </dict><dict>
             <key>name</key>
+            <string>Python Flake8 Lint Gutter Mark</string>
+            <key>scope</key>
+            <string>flake8lint.mark.gutter</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFFFFF</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
             <string>Python Flake8 Lint Warning</string>
             <key>scope</key>
             <string>flake8lint.mark.warning</string>
@@ -390,16 +400,6 @@
             <dict>
                 <key>foreground</key>
                 <string>#981600</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
-            <string>Python Flake8 Lint Gutter Mark</string>
-            <key>scope</key>
-            <string>flake8lint.mark.gutter</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#FFFFFF</string>
             </dict>
         </dict><dict>
             <key>name</key>

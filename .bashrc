@@ -192,22 +192,25 @@ alias freset="git fetch && git reset --hard origin/\$(_current_branch_name)"
 
 # Make the prompt blue, bold, display the current path and the current branch
 export PS1="\
-\[$(tput setaf 1)\]\
-\$?\
-\[$(tput setaf 5)\]\
--\
-\[$(tput setaf 4)\]\
-\A\
-\[$(tput setaf 5)\]\
--\
-\[$(tput setaf 4)\]\
-\[$(tput bold)\]\
-\w\
-\[$(tput sgr0)\]\
-\[$(tput setaf 5)\]\
-\$(__git_ps1)\
-\[$(tput setaf 4)\]\
-\[$(tput bold)\]\
- \$ \
+\[$(tput setaf 1)\]\$?\
+\[$(tput setaf 5)\]-\
+\[$(tput setaf 4)\]\A\
+\[$(tput setaf 5)\]-\
+\[$(tput setaf 4)\]\[$(tput bold)\]\w\
+\[$(tput sgr0)\]\[$(tput setaf 5)\]\$(__git_ps1)\
+\[$(tput setaf 4)\]\[$(tput bold)\] \$ \
 \[$(tput sgr0)\]\
 "
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# Windows Subsystem for Linux specific initialisation:
+# if cat /proc/sys/kernel/osrelease | grep -q Microsoft; then
+#     echo "WSL identified, running WSL specific commands."
+#     export PATH="/mnt/c/bin/:$PATH" # nope, cannot execute binary file (*.lnk)
+#     echo "added C:\bin\ to WSL path"
+# else
+#     echo "WSL not found"
+# fi

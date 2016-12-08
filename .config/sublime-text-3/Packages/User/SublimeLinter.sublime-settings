@@ -40,8 +40,15 @@
             "html (rails)": "html",
             "html 5": "html",
             "javascript (babel)": "javascript",
+            "javascript (gruntfile)": "javascript",
+            "javascript (gulpfile)": "javascript",
+            "json (bower)": "json",
+            "json (npm)": "json",
+            "json (settings)": "json",
+            "magicpython": "python",
             "php": "html",
-            "python django": "python"
+            "python django": "python",
+            "pythonimproved": "python"
         },
         "warning_color": "DDB700",
         "wrap_find": true
