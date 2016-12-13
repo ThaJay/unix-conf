@@ -207,10 +207,9 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # Windows Subsystem for Linux specific initialisation:
-# if cat /proc/sys/kernel/osrelease | grep -q Microsoft; then
-#     echo "WSL identified, running WSL specific commands."
-#     export PATH="/mnt/c/bin/:$PATH" # nope, cannot execute binary file (*.lnk)
-#     echo "added C:\bin\ to WSL path"
-# else
-#     echo "WSL not found"
-# fi
+ if cat /proc/sys/kernel/osrelease | grep -q Microsoft; then
+     echo "WSL identified, running WSL specific commands."
+     export DISPLAY=localhost:0.0
+ else
+     echo "WSL not found"
+ fi

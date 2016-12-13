@@ -9,4 +9,4 @@
 	ui = true
 [core]
 	excludesfile = ~/.gitignore
-  editor = 'subl' --wait
+  # editor = 'subl' --wait

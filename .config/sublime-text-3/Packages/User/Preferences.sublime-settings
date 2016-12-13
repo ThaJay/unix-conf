@@ -18,6 +18,7 @@
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 10,
+	"font_options": [ "gray_antialias", "subpixel_antialias" ],
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":

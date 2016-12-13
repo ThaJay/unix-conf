@@ -22,3 +22,6 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Ubuntu make installation of Ubuntu Make binary symlink
+PATH=/home/dj/.local/share/umake/bin:$PATH
+
