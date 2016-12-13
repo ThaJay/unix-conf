@@ -206,6 +206,13 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
+
+# Android studio & sdk installed through umake
+export PATH="$HOME/.local/share/umake/android/android-studio/bin/:$PATH"
+export PATH="$HOME/.local/share/umake/android/android-sdk/tools/:$PATH"
+export PATH="$HOME/.local/share/umake/android/android-sdk/platform-tools/:$PATH"
+ANDROID_HOME=$HOME/.local/share/umake/android/android-sdk
+
 # Windows Subsystem for Linux specific initialisation:
  if cat /proc/sys/kernel/osrelease | grep -q Microsoft; then
      echo "WSL identified, running WSL specific commands."
