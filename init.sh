@@ -1,4 +1,3 @@
-mv ~/.config/sublime-text-3/Packages/User/ ~/.config/sublime-text-3/Packages/User.old/
 mv ~/.bash_aliases ~/.bash_aliases.old
 mv ~/.bash_profile ~/.bash_profile.old
 mv ~/.bashrc ~/.bashrc.old
@@ -7,12 +6,18 @@ mv ~/.gitignore ~/.gitignore.old
 mv ~/.profile ~/.profile.old
 mv ~/.tmux.conf ~/.tmux.conf.old
 
-printf "renamed already present files with '.old' postfix\n\n"
+printf "renamed already present files with '.old' postfix\n"
 
-mkdir -p ~/.config/sublime-text-3/Packages/User
-printf "Sublime Text 3 User folder recreated\n"
+if [ ! -d ~/.config/sublime-text-3/Packages/ ]; then
+  mkdir -p ~/.config/sublime-text-3/Packages/
+  printf "Sublime Text 3 Packages folder created\n"
+else
+  mv ~/.config/sublime-text-3/Packages/User ~/.config/sublime-text-3/Packages/User.old
+  printf "renamed sublime-text-3 User folder or symlink with '.old' postfix\n\n"
+fi
 
-ln -s $PWD/.config/sublime-text-3/Packages/User/ ~/.config/sublime-text-3/Packages/User
+
+ln -s $PWD/.config/sublime-text-3/Packages/User ~/.config/sublime-text-3/Packages/User
 printf "Symlink created to Sublime Text 3 User folder\n"
 
 ln -s $PWD/.bashrc ~/.bashrc
