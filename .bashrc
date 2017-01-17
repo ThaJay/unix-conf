@@ -144,7 +144,6 @@ fi
 
 export NODE_ENV='development'
 export ANDROID_HOME=/opt/android-sdk-linux
-export JAVA_HOME="$HOME/opt/jdk1.8.0_102/"
 export PATH="$HOME/opt/jdk1.8.0_102/bin:$HOME/opt/android-sdk-linux/tools:$HOME/opt/android-sdk-linux/platform-tools:$PATH"
 
 # Git
@@ -214,9 +213,11 @@ export PATH="$HOME/.local/share/umake/android/android-sdk/platform-tools/:$PATH"
 ANDROID_HOME=$HOME/.local/share/umake/android/android-sdk
 
 # Windows Subsystem for Linux specific initialisation:
- if cat /proc/sys/kernel/osrelease | grep -q Microsoft; then
-     echo "WSL identified, running WSL specific commands."
-     export DISPLAY=localhost:0.0
- else
-     echo "WSL not found"
- fi
+if cat /proc/sys/kernel/osrelease | grep -q Microsoft; then
+    echo "WSL identified, running WSL specific commands."
+    export DISPLAY=localhost:0.0
+    export JAVA_HOME="$HOME/opt/jdk1.8.0_102/"
+else
+    echo "WSL not found"
+    export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre/"
+fi
