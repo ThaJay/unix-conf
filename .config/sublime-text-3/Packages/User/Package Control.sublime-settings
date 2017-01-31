@@ -25,7 +25,6 @@
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-contrib-standard",
 		"zz File Icons"
 	]
 }

@@ -51,7 +51,6 @@
 		80,
 		120
 	],
-	"save_on_focus_lost": true,
 	"scroll_speed": 0.68,
 	"show_line_endings": true,
 	"show_tab_close_buttons": false,

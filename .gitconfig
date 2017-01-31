@@ -5,8 +5,11 @@
 	default = simple
 [alias]
 	update = !git pull && git submodule update --init --recursive --remote --merge
+	spush = push --recurse-submodules=on-demand
 [color]
 	ui = true
 [core]
 	excludesfile = ~/.gitignore
   # editor = 'subl' --wait
+[pull]
+	rebase = true
