@@ -147,6 +147,7 @@ export ANDROID_HOME=/opt/android-sdk-linux
 export PATH="$HOME/opt/jdk1.8.0_102/bin:$HOME/opt/android-sdk-linux/tools:$HOME/opt/android-sdk-linux/platform-tools:$PATH"
 
 # Git
+source '/usr/lib/git-core/git-sh-prompt'
 
 _has_commits() {
     if git rev-parse --verify HEAD > /dev/null 2>&1; then
