@@ -5,6 +5,7 @@ mv ~/.gitconfig ~/.gitconfig.old
 mv ~/.gitignore ~/.gitignore.old
 mv ~/.profile ~/.profile.old
 mv ~/.tmux.conf ~/.tmux.conf.old
+mv ~/.inputrc ~/.inputrc.old
 
 printf "renamed already present files with '.old' postfix\n"
 
@@ -39,4 +40,7 @@ ln -s $PWD/.profile ~/.profile
 printf "Symlink created to .profile\n"
 
 ln -s $PWD/.tmux.conf ~/.tmux.conf
-printf "Symlink created to .tmux.conf\n\n"
+printf "Symlink created to .tmux.conf\n"
+
+ln -s $PWD/.inputrc ~/.inputrc
+printf "Symlink created to .inputrc\n\n"

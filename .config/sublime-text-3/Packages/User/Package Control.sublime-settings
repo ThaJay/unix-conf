@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Alignment",
 		"All Autocomplete",
 		"Babel",
@@ -12,19 +13,20 @@
 		"Djaneiro",
 		"Dockerfile Syntax Highlighting",
 		"Dotfiles Syntax Highlighting",
+		"INI",
 		"Laravel Blade Highlighter",
 		"Material Theme",
 		"nginx",
 		"Package Control",
 		"PackageResourceViewer",
 		"PowerShell",
+		"Pretty JSON",
 		"Python Flake8 Lint",
 		"react-native-snippets",
 		"Sass",
 		"SCSS",
 		"SublimeCodeIntel",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
-		"zz File Icons"
+		"SublimeLinter-contrib-eslint"
 	]
 }

@@ -5,5 +5,5 @@
 
     // If the following character is matched for alignment, insert a space
     // before it in the final alignment
-    "alignment_space_chars": ["=", "//"],
+    "alignment_space_chars": ["//"],
 }

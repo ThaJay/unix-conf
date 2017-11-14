@@ -6,10 +6,11 @@
 [alias]
 	update = !git pull && git submodule update --init --recursive --remote --merge
 	spush = push --recurse-submodules=on-demand
+  lgf = log --graph --topo-order --pretty='format:%C(yellow)%h%C(yellow)%d %Cblue%aD %Cgreenby %an%Creset -- %s'
 [color]
-	ui = true
+  ui = true
 [core]
-	excludesfile = ~/.gitignore
-  # editor = 'subl' --wait
+  excludesfile = ~/.gitignore
+  editor = 'subl' --wait
 [pull]
-	rebase = true
+  rebase = true

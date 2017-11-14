@@ -5,7 +5,7 @@
   "gutter_marks": "dot",
   "pydocstyle": false,
   "import-order": false,
-  "complexity": 11,
+  "complexity": 13,
   "use_flake8_project_config": false,
   "pep8_max_line_length": 119,
   "ignore": ["W503"],

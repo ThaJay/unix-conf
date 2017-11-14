@@ -10,7 +10,7 @@
 	"caret_extra_top": 2,
 	"caret_extra_width": 1,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/Material-Theme-Darker (Flake8Lint).tmTheme",
+	"color_scheme": "Packages/User/Material-Theme (Flake8Lint).tmTheme",
 	"copy_with_empty_selection": false,
 	"default_line_ending": "unix",
 	"detect_indentation": true,
@@ -24,8 +24,7 @@
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 10,
-	"highlight_line": true,
+	"font_size": 11,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
