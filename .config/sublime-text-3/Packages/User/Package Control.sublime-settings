@@ -27,6 +27,6 @@
 		"SCSS",
 		"SublimeCodeIntel",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint"
+		"SublimeLinter-eslint"
 	]
 }

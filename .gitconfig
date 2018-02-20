@@ -4,9 +4,11 @@
 [push]
 	default = simple
 [alias]
-	update = !git pull && git submodule update --init --recursive --remote --merge
+	update = !git pull && git submodule update --init --recursive
 	spush = push --recurse-submodules=on-demand
   lgf = log --graph --topo-order --pretty='format:%C(yellow)%h%C(yellow)%d %Cblue%aD %Cgreenby %an%Creset -- %s'
+	sdiff = !git diff && git submodule foreach 'git diff'
+	supdate = submodule update --remote --merge
 [color]
   ui = true
 [core]

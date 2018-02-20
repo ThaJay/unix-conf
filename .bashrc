@@ -146,6 +146,10 @@ export NODE_ENV='development'
 export ANDROID_HOME=/opt/android-sdk-linux
 export PATH="$HOME/opt/jdk1.8.0_102/bin:$HOME/opt/android-sdk-linux/tools:$HOME/opt/android-sdk-linux/platform-tools:$PATH"
 
+export ANDROID_SDK=/opt/android-sdk-linux
+export ANDROID_NDK=/media/dj/Shared/android-ndk-r10e
+
+
 # Git
 source '/usr/lib/git-core/git-sh-prompt'
 

@@ -1006,16 +1006,6 @@
 		</dict>
 	<dict>
             <key>name</key>
-            <string>Python Flake8 Lint Critical</string>
-            <key>scope</key>
-            <string>flake8lint.mark.critical</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#981600</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
             <string>Python Flake8 Lint Gutter Mark</string>
             <key>scope</key>
             <string>flake8lint.mark.gutter</string>
@@ -1026,13 +1016,13 @@
             </dict>
         </dict><dict>
             <key>name</key>
-            <string>Python Flake8 Lint Error</string>
+            <string>Python Flake8 Lint Critical</string>
             <key>scope</key>
-            <string>flake8lint.mark.error</string>
+            <string>flake8lint.mark.critical</string>
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#DA2000</string>
+                <string>#981600</string>
             </dict>
         </dict><dict>
             <key>name</key>
@@ -1043,6 +1033,16 @@
             <dict>
                 <key>foreground</key>
                 <string>#EDBA00</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
+            <string>Python Flake8 Lint Error</string>
+            <key>scope</key>
+            <string>flake8lint.mark.error</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#DA2000</string>
             </dict>
         </dict></array>
 	<key>uuid</key>
