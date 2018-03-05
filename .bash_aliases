@@ -1,6 +1,5 @@
 alias ll='ls -alF'
 alias la='ls -A'
-# alias l='ls -CF'
 alias l='ls -lAFh'
 alias c='cd'
 alias c.='cd ..'
@@ -29,23 +28,7 @@ alias ssh-add='eval $(ssh-agent) && ssh-add'
 alias gstat='git status'
 alias wip="git commit -a -m 'wip' && git push"
 alias startservices='sudo su -c "service mysql start; service redis-server restart;"'
-
-actenv() {
-    cur_working_dir=$(pwd)
-    activate_path=env/bin/activate
-
-    while [ ! -f $activate_path ]; do
-        if [ "$(pwd)" == '/' ]; then
-            echo No virtualenv found
-            cd $cur_working_dir
-            return
-        fi
-        cd ..
-    done
-
-    source $activate_path
-    cd $cur_wording_dir
-}
+alias logcat-native='echo "adb logcat *:S ReactNative:V ReactNativeJS:V"; adb logcat *:S ReactNative:V ReactNativeJS:V'
 
 addpath() {
     export PATH=$PATH:$*
