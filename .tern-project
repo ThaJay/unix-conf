@@ -1,0 +1,20 @@
+{
+  "libs": [
+    "browser",
+    "ecmascript",
+    "react"
+  ],
+  "loadEagerly": [
+    "src/*.js"
+  ],
+  "plugins": {
+    "node": {},
+    "modules": {},
+    "requirejs": {},
+    "es_modules": {},
+    "jasmine": {},
+    "webpack": {
+      "configPath": "./webpack.config.js"
+    }
+  }
+}
