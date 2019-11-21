@@ -11,13 +11,14 @@
 	sdiff = !git diff && git submodule foreach 'git diff'
 	supdate = submodule update --remote --merge
 	quick-stats = ! /usr/local/bin/git-quick-stats
+	squash-all = "!f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
 [color]
   ui = true
 [core]
   excludesfile = ~/.gitignore
-  editor = 'code' --wait
+	editor = \"C:\\Users\\djjw\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
 	autocrlf = false
 [pull]
   rebase = true
 [winUpdater]
-	recentlySeenVersion = 2.23.0.windows.1
+	recentlySeenVersion = 2.24.0.windows.2
