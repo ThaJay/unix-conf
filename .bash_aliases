@@ -23,10 +23,10 @@ alias ptp='ptipython --vi'
 alias clrswp='find . -name "*.swp" -delete'
 alias prjson='python -m json.tool'
 alias nodebin='echo -e "Setting up nodebin with path:\n$(npm bin)"; export PATH=$(npm bin):$PATH'
-alias startservices='sudo su -c "service mysql start; service redis-server restart;"'
+alias startservices='sudo su -c "service mysql restart; service redis-server restart;"'
 
 alias itp='ssh itp_dj@dev1.intoparty.com'
-alias ssh-crm'ssh itp_dj@142.93.142.72'
+alias ssh-crm='ssh itp_dj@142.93.142.72'
 
 alias ssh-add='eval $(ssh-agent) && ssh-add'
 alias logcat-native='adb logcat ReactNative:V ReactNativeJS:V AndroidRuntime:V *:S'
@@ -41,6 +41,7 @@ alias django-testk='docker/manage.sh test --parallel 4 --keepdb'
 alias django-testfk='docker/manage.sh test --parallel 4 --failfast --keepdb'
 
 alias wip='gitwip'
+alias commit-random='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"'
 
 # alias pip='pip3'
 # alias python='python3'
@@ -61,6 +62,30 @@ gitwip () {
     git push;
 }
 
-addpath () {
+add-to-path () {
     export PATH=$PATH:$*
 }
+
+show-branch-by-date () {
+    for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r
+}
+
+show-remote-branch-by-date () {
+    for k in `git branch -r | perl -pe 's/^..(.*?)( ->.*)?$/\1/'`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r
+}
+
+delete-remote-branch () {
+    echo "deleting remote branch $1 $2"
+    git push -d $1 $2
+    echo "deleting local branch $2"
+    git branch -d $2
+}
+
+# our handler that returns choices by populating Bash array COMPREPLY
+# (filtered by the currently entered word ($2) via compgen builtin)
+_gitpull_complete() {
+    branches=$(git branch -l | cut -c3-)
+    COMPREPLY=($(compgen -W "$branches" -- "$2"))
+}
+# we now register our handler to provide completion hints for the "gitpull" command
+complete -F _gitpull_complete delete-remote-branch

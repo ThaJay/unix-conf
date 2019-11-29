@@ -66,8 +66,8 @@ export LC_ALL=en_US.UTF-8
 export PATH=$PATH:$HOME/bin
 
 # Use a big command history
-export HISTSIZE=4321
-export HISTFILESIZE=9001
+export HISTSIZE=54321
+export HISTFILESIZE=90001
 
 # Set the default editor to sublime-text if available
 if hash code 2>/dev/null; then
