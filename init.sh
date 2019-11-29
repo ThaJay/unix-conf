@@ -27,8 +27,3 @@ ln -s $PWD/.inputrc ~/.inputrc
 printf "    Symlink created to .inputrc\n"
 ln -s $PWD/.tern-project ~/.tern-project
 printf "    Symlink created to .tern-project\n\n"
-
-cat code-extensions.txt | xargs -L 1 code --install-extension
-printf "    installed vscode extensions from code-extensions.txt\n"
-code --list-extensions > code-extensions.txt
-printf "    saved currently installed VScode extensions in code-extensions.txt\n\n"
