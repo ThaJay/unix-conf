@@ -83,6 +83,8 @@ fi
 # Don't put duplicate lines or lines starting with space in the history
 export HISTCONTROL=ignoreboth
 
+export PROMPT_COMMAND='history -a'
+
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
