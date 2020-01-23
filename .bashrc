@@ -194,19 +194,26 @@ diff-last-commit() {
     fi
 }
 
-# alias gamend="git add --all && git commit --amend"
-alias gamend="git commit -a --amend && git push -f"
+alias gamend="git add . && git commit --amend --no-edit && git push -f"
 alias freset="git fetch && git reset --hard origin/\$(_current_branch_name)"
 
-# Make the prompt blue, bold, display the current path and the current branch
-export PS1="\
+
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUPSTREAM="auto"
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_STATESEPARATOR=" "
+GIT_PS1_DESCRIBE_STYLE='branch'
+
+PS1="\
 \[$(tput setaf 1)\]\$?\
 \[$(tput setaf 5)\]-\
 \[$(tput setaf 4)\]\A\
 \[$(tput setaf 5)\]-\
-\[$(tput setaf 4)\]\[$(tput bold)\]\w\
-\[$(tput sgr0)\]\[$(tput setaf 5)\]\$(__git_ps1)\
-\[$(tput setaf 4)\]\[$(tput bold)\] \$ \
+\[$(tput bold)\]\[$(tput setaf 4)\]\w\
+\[$(tput sgr0)\]\
+\[$(tput setaf 5)\]\
+\$(__git_ps1)\
+\[$(tput setaf 4)\]\[$(tput bold)\]\$ \
 \[$(tput sgr0)\]\
 "
 

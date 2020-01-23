@@ -42,6 +42,7 @@ alias django-testfk='docker/manage.sh test --parallel 4 --failfast --keepdb'
 
 alias wip='gitwip'
 alias commit-random='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"'
+alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 
 # alias pip='pip3'
 # alias python='python3'
