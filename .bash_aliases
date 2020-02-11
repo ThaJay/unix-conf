@@ -24,6 +24,7 @@ alias clrswp='find . -name "*.swp" -delete'
 alias prjson='python -m json.tool'
 alias nodebin='echo -e "Setting up nodebin with path:\n$(npm bin)"; export PATH=$(npm bin):$PATH'
 alias startservices='sudo su -c "service mysql restart; service redis-server restart;"'
+alias docker-up='docker-compose up -d && docker-compose logs -ft'
 
 alias itp='ssh itp_dj@dev1.intoparty.com'
 alias ssh-crm='ssh itp_dj@142.93.142.72'
