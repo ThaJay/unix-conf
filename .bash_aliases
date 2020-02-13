@@ -1,3 +1,9 @@
+
+# function ls {
+#   command ls -F -h --color=always -v --author --time-style=long-iso -C "$@" | less -R -X -F
+# }
+
+alias ls='ls -F -h --color=always -v --author --time-style=long-iso -C'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -lAFh'

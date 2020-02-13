@@ -236,7 +236,7 @@
     [
         {
             "name": "Git Bash",
-            "commandline": "%ProgramFiles%/Git/bin/bash.exe",
+            "commandline": "powershell.exe  -NoExit -Command \"C:\\'Program Files'\\Git\\bin\\bash.exe\"",
             "colorScheme": "Solarized Dark",
             "cursorShape": "filledBox",
             "cursorColor": "#808080",
