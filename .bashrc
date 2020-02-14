@@ -188,6 +188,10 @@ diff-last-commit() {
 alias gamend="git add . && git commit --amend --no-edit && git push -f"
 alias freset="git fetch && git reset --hard origin/\$(_current_branch_name)"
 
+if [ -e ~/.git-prompt.sh ]
+then
+    source ~/.git-prompt.sh
+fi
 
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
