@@ -1,8 +1,3 @@
-
-# function ls {
-#   command ls -F -h --color=always -v --author --time-style=long-iso -C "$@" | less -R -X -F
-# }
-
 alias ls='ls -F -h --color=always -v --author --time-style=long-iso -C'
 alias ll='ls -alF'
 alias la='ls -A'
@@ -28,20 +23,22 @@ alias ro='sudo su -'
 alias ptp='ptipython --vi'
 alias clrswp='find . -name "*.swp" -delete'
 alias prjson='python -m json.tool'
+
 alias nodebin='echo -e "Setting up nodebin with path:\n$(npm bin)"; export PATH=$(npm bin):$PATH'
 alias startservices='sudo su -c "service mysql restart; service redis-server restart;"'
 alias docker-up='docker-compose up -d && docker-compose logs -ft'
-
 alias itp='ssh itp_dj@dev1.intoparty.com'
 alias ssh-crm='ssh itp_dj@142.93.142.72'
-
 alias ssh-add='eval $(ssh-agent) && ssh-add'
+
 alias logcat-native='adb logcat ReactNative:V ReactNativeJS:V AndroidRuntime:V *:S'
 alias restart-adb='adb kill-server&&adb devices'
 alias adb-reverse='adb reverse tcp:8081 tcp:8081'
 alias rn-devmenu='adb shell input keyevent 82'
+
 alias npmi='npm i --save'
 alias npmid='npm i --save-dev'
+
 alias dump-translations='docker/manage.sh json_dump_app_translations > strings.json'
 alias django-test='docker/manage.sh test --parallel 4'
 alias django-testk='docker/manage.sh test --parallel 4 --keepdb'

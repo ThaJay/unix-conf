@@ -6,6 +6,7 @@ ren %userprofile%\.babel.json   .babel.json.old
 ren %userprofile%\.bash_aliases .bash_aliases.old
 ren %userprofile%\.bash_profile .bash_profile.old
 ren %userprofile%\.bashrc       .bashrc.old
+ren %userprofile%\.eslintrc.js  .eslintrc.js.old
 ren %userprofile%\.gitconfig    .gitconfig.old
 ren %userprofile%\.gitignore    .gitignore.old
 ren %userprofile%\.inputrc      .inputrc.old
@@ -20,6 +21,7 @@ mklink %userprofile%\.babel.json   %cd%\.babel.json
 mklink %userprofile%\.bash_aliases %cd%\.bash_aliases
 mklink %userprofile%\.bash_profile %cd%\.bash_profile
 mklink %userprofile%\.bashrc       %cd%\.bashrc
+mklink %userprofile%\.eslintrc.js  %cd%\.eslintrc.js
 mklink %userprofile%\.gitconfig    %cd%\.gitconfig
 mklink %userprofile%\.gitignore    %cd%\.gitignore
 mklink %userprofile%\.inputrc      %cd%\.inputrc

@@ -8,6 +8,7 @@ mv ~/.tmux.conf ~/.tmux.conf.old
 mv ~/.inputrc ~/.inputrc.old
 mv ~/.tern-project ~/.tern-project.old
 mv ~/.dircolors ~/.dircolors.old
+mv ~/.eslintrc.js ~/.eslintrc.js.old
 printf "    renamed already present files with '.old' postfix\n"
 
 ln -s $PWD/.bashrc ~/.bashrc
@@ -29,4 +30,6 @@ printf "    Symlink created to .inputrc\n"
 ln -s $PWD/.tern-project ~/.tern-project
 printf "    Symlink created to .tern-project\n"
 ln -s $PWD/.dircolors ~/.dircolors
-printf "    Symlink created to .dircolors\n\n"
+printf "    Symlink created to .dircolors\n"
+ln -s $PWD/.dircolors ~/.eslintrc.js
+printf "    Symlink created to .eslintrc.js\n\n"
