@@ -16,7 +16,7 @@
 	ui = auto
 [core]
   excludesfile = ~/.gitignore
-	editor = \"C:\\Users\\djjw\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
+	editor = \"C:\\Program Files (x86)\\Microsoft VS Code\\Code.exe\" --wait
 	autocrlf = false
 [pull]
   rebase = true
