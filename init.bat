@@ -1,6 +1,8 @@
 del %userprofile%\*.old
 del %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json.old
-ren %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json profiles.json.old
+
+del %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json.old
+ren %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json settings.json.old
 
 ren %userprofile%\.babel.json   .babel.json.old
 ren %userprofile%\.bash_aliases .bash_aliases.old
@@ -17,6 +19,7 @@ ren %userprofile%\.tmux.conf    .tmux.conf.old
 
 echo "renamed already present files with '.old' postfix\n"
 
+mklink %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json %cd%\settings.json
 mklink %userprofile%\.babel.json   %cd%\.babel.json
 mklink %userprofile%\.bash_aliases %cd%\.bash_aliases
 mklink %userprofile%\.bash_profile %cd%\.bash_profile
@@ -29,5 +32,3 @@ mklink %userprofile%\.npmrc        %cd%\.npmrc
 mklink %userprofile%\.profile      %cd%\.profile
 mklink %userprofile%\.tern-project %cd%\.tern-project
 mklink %userprofile%\.tmux.conf    %cd%\.tmux.conf
-
-mklink %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json %cd%\profiles.json
