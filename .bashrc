@@ -131,15 +131,14 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 
-export NODE_ENV='development'
+# export NODE_ENV='development'
 
 
-# Git Bash
-export ANDROID_HOME=C\:\\Users\\djjw\\AppData\\Local\\Android\\Sdk
-export ANDROID_NDK=C\:\\Users\\djjw\\AppData\\Local\\Android\\Ndk
+# # Git Bash
+# export ANDROID_HOME=C\:\\Users\\djjw\\AppData\\Local\\Android\\Sdk
+# export ANDROID_NDK=C\:\\Users\\djjw\\AppData\\Local\\Android\\Ndk
 
-
-export PATH="/opt/android-studio/bin:$PATH"
+# export PATH="/opt/android-studio/bin:$PATH"
 
 
 # Git
