@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export PYTHONIOENCODING='utf-8'
+eval "$(thefuck --alias)"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
