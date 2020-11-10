@@ -48,6 +48,10 @@ alias wip='gitwip'
 alias commit-random='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"'
 alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 
+gitignore() {
+    echo "$1" >> .gitignore
+}
+
 # alias pip='pip3'
 # alias python='python3'
 

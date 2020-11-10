@@ -1,4 +1,5 @@
 del %userprofile%\*.old
+del %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json
 del %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json.old
 
 del %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json.old
@@ -19,7 +20,7 @@ ren %userprofile%\.tmux.conf    .tmux.conf.old
 
 echo "renamed already present files with '.old' postfix\n"
 
-mklink %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json %cd%\settings.json
+mklink %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json %cd%\settings.json
 mklink %userprofile%\.babel.json   %cd%\.babel.json
 mklink %userprofile%\.bash_aliases %cd%\.bash_aliases
 mklink %userprofile%\.bash_profile %cd%\.bash_profile
