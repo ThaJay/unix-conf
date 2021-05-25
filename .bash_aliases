@@ -52,8 +52,8 @@ gitignore() {
     echo "$1" >> .gitignore
 }
 
-alias pip='pip3'
-alias python='python3'
+# alias pip='pip3'
+# alias python='python3'
 
 # test-python ()
 # {
