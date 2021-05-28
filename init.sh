@@ -4,11 +4,11 @@ mv ~/.bashrc ~/.bashrc.old
 mv ~/.gitconfig ~/.gitconfig.old
 mv ~/.gitignore ~/.gitignore.old
 mv ~/.profile ~/.profile.old
-mv ~/.tmux.conf ~/.tmux.conf.old
 mv ~/.inputrc ~/.inputrc.old
 mv ~/.tern-project ~/.tern-project.old
 mv ~/.dircolors ~/.dircolors.old
 mv ~/.eslintrc.js ~/.eslintrc.js.old
+mv ~/.tmux.conf.local ~/.tmux.conf.local.old
 printf "    renamed already present files with '.old' postfix\n"
 
 ln -s $PWD/.bashrc ~/.bashrc
@@ -23,8 +23,6 @@ ln -s $PWD/.gitignore ~/.gitignore
 printf "    Symlink created to .gitignore\n"
 ln -s $PWD/.profile ~/.profile
 printf "    Symlink created to .profile\n"
-ln -s $PWD/.tmux.conf ~/.tmux.conf
-printf "    Symlink created to .tmux.conf\n"
 ln -s $PWD/.inputrc ~/.inputrc
 printf "    Symlink created to .inputrc\n"
 ln -s $PWD/.tern-project ~/.tern-project
@@ -33,3 +31,5 @@ ln -s $PWD/.dircolors ~/.dircolors
 printf "    Symlink created to .dircolors\n"
 ln -s $PWD/.dircolors ~/.eslintrc.js
 printf "    Symlink created to .eslintrc.js\n\n"
+ln -s $PWD/.tmux.conf ~/.tmux.conf.local
+printf "    Symlink created to .tmux.conf.local\n"
