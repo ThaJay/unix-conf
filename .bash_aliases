@@ -76,6 +76,10 @@ gitwip () {
     git push;
 }
 
+name-tab () {
+    echo -en "\033]0;$1\a"
+}
+
 # test-python ()
 # {
 #     ./docker/manage.sh test --parallel 4 $(echo "$*" | sed 's/\//./g' | sed 's/\.py//g' | sed 's/\.$//')
@@ -171,5 +175,6 @@ alias n14="nvm use 14"
 alias n14dev="n14 && yarn dev"
 alias docker-remote="docker exec -it"
 alias freset="git fetch && git reset --hard origin/\$(_current_branch_name)"
+alias nt="name-tab"
 
 complete -F _gitpull_complete delete-remote-branch
