@@ -7,3 +7,4 @@ setup.cfg
 disable-csrf.py
 .vscode/settings.json
 node_modules/
+.bash_history

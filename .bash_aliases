@@ -171,6 +171,8 @@ alias gamend="git add . && git commit --amend --no-edit && git push -f"
 
 # Maester
 alias sshm='ssh webdev@web03.branchonline.nl'
+alias ssh-insights="ssh root@178.62.244.98"
+alias ssh-certificates="ssh root@161.35.94.17"
 alias n14="nvm use 14"
 alias n14dev="n14 && yarn dev"
 alias docker-remote="docker exec -it"

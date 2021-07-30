@@ -49,8 +49,9 @@ if [ -d $HOME/.bash_plugins ]; then
 fi
 
 # Set the correct locale
-export LANG=en_GB.UTF-8
-export LC_ALL=en_GB.UTF-8
+# export LANG=en_GB.UTF-8
+# export LANGUAGE=en_GB.UTF-8
+# export LC_ALL=en_GB.UTF-8
 
 # Add the ~/bin/ and ~/.local/bin dir to $PATH
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin
