@@ -8,3 +8,7 @@ disable-csrf.py
 .vscode/settings.json
 node_modules/
 .bash_history
+.psql_history
+.wget-hsts
+.composer/
+.maester-config.env

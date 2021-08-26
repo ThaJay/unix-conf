@@ -118,7 +118,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias ls='ls -F -h --color=always -v --author --time-style=long-iso -C'
+alias ls='ls -F -h -v -C --color=always --author --time-style=long-iso --group-directories-first'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -lAFh'
