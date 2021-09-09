@@ -178,5 +178,6 @@ alias n14dev="n14 && yarn dev"
 alias docker-remote="docker exec -it"
 alias freset="git fetch && git reset --hard origin/\$(_current_branch_name)"
 alias nt="name-tab"
+alias yii_test="docker-compose exec php ./yii_test test"
 
 complete -F _gitpull_complete delete-remote-branch
