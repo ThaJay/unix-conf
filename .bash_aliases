@@ -70,8 +70,10 @@ gitignore() {
 gitwip () {
     echo "adding .";
     git add .;
+
     echo "making commit with message: wip $1";
     git commit -a -m "wip $1";
+
     echo "pushing commit";
     git push;
 }
@@ -93,6 +95,7 @@ name-tab () {
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 # Linux specific settings
 if [[ $OSTYPE == linux* ]]; then
     # Simulate OSX's pbcopy and pbpaste on linux using xsel
@@ -106,6 +109,7 @@ if [[ $OSTYPE == linux* ]]; then
         | xargs sudo apt-get -y purge"
 
 fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -126,23 +130,24 @@ alias c='cd'
 alias c.='cd ..'
 alias c-='cd -'
 alias c~='cd ~'
-alias v='vim .'
-alias vi='vim'
-alias vip='vim -p'
-alias vs='vi -S Session.vim'
-alias j='jobs'
-alias f='fg'
 alias t='tmux'
 alias tmc='tmux loadb -'
 alias tmp='tmux saveb -'
-alias s='screen'
 alias rm='rm -i'
-alias ip='ipython --pprint'
+alias gs='git status'
 alias gg='git grep -i'
 alias ro='sudo su -'
-alias ptp='ptipython --vi'
-alias clrswp='find . -name "*.swp" -delete'
-alias prjson='python -m json.tool'
+alias v='vim .'
+# alias vi='vim'
+# alias vip='vim -p'
+# alias vs='vi -S Session.vim'
+# alias j='jobs'
+# alias f='fg'
+# alias s='screen'
+# alias ip='ipython --pprint'
+# alias ptp='ptipython --vi'
+# alias clrswp='find . -name "*.swp" -delete'
+# alias prjson='python -m json.tool'
 
 alias nodebin='echo -e "Setting up nodebin with path:\n$(npm bin)"; export PATH=$(npm bin):$PATH'
 alias startservices='sudo su -c "service mysql restart; service redis-server restart;"'
@@ -156,13 +161,15 @@ alias restart-adb='adb kill-server&&adb devices'
 alias adb-reverse='adb reverse tcp:8081 tcp:8081'
 alias rn-devmenu='adb shell input keyevent 82'
 
-alias npmi='npm i --save'
-alias npmid='npm i --save-dev'
+alias yad="yarn add"
+alias yadD="yarn add -D"
+# alias npmi='npm i --save'
+# alias npmid='npm i --save-dev'
 
-alias dump-translations='docker/manage.sh json_dump_app_translations > strings.json'
-alias django-test='docker/manage.sh test --parallel 4'
-alias django-testk='docker/manage.sh test --parallel 4 --keepdb'
-alias django-testfk='docker/manage.sh test --parallel 4 --failfast --keepdb'
+# alias dump-translations='docker/manage.sh json_dump_app_translations > strings.json'
+# alias django-test='docker/manage.sh test --parallel 4'
+# alias django-testk='docker/manage.sh test --parallel 4 --keepdb'
+# alias django-testfk='docker/manage.sh test --parallel 4 --failfast --keepdb'
 
 alias wip='gitwip'
 alias commit-random='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"'
@@ -175,8 +182,8 @@ alias ssh-insights="ssh root@178.62.244.98"
 alias ssh-certificates="ssh root@161.35.94.17"
 alias n14="nvm use 14"
 alias n14dev="n14 && yarn dev"
-alias docker-remote="docker exec -it"
-alias freset="git fetch && git reset --hard origin/\$(_current_branch_name)"
+alias indocker="docker-compose exec"
+alias greset="git fetch && git reset --hard origin/\$(_current_branch_name)"
 alias nt="name-tab"
 alias yii_test="docker-compose exec php ./yii_test test"
 
