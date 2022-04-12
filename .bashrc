@@ -106,12 +106,18 @@ export NODE_ENV='development'
 
 # export PATH="/opt/android-studio/bin:$PATH"
 
+# OSX
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
 # Git prompt
 if [ -s /usr/lib/git-core/git-sh-prompt ]; then
     source /usr/lib/git-core/git-sh-prompt
-fi
+else
+    curl -o ~/.git-prompt.sh \
+        https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
-if [ -s ~/.git-prompt.sh ]; then
     source ~/.git-prompt.sh
 fi
 
