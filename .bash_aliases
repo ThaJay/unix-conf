@@ -82,6 +82,8 @@ name-tab () {
     echo -en "\033]0;$1\a"
 }
 
+complete -F _gitpull_complete delete-remote-branch
+
 # test-python ()
 # {
 #     ./docker/manage.sh test --parallel 4 $(echo "$*" | sed 's/\//./g' | sed 's/\.py//g' | sed 's/\.$//')
@@ -135,7 +137,9 @@ alias t='tmux'
 alias tmc='tmux loadb -'
 alias tmp='tmux saveb -'
 alias rm='rm -i'
+alias gf='git fetch'
 alias gs='git status'
+alias gp='git push'
 alias gg='git grep -i'
 alias ro='sudo su -'
 alias v='vim .'
@@ -178,14 +182,18 @@ alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 alias gamend="git add . && git commit --amend --no-edit && git push -f"
 
 # Maester
-alias sshm='ssh webdev@web03.branchonline.nl'
-alias ssh-insights="ssh root@178.62.244.98"
-alias ssh-certificates="ssh root@161.35.94.17"
+# alias sshm='ssh webdev@web03.branchonline.nl'
+# alias ssh-insights="ssh root@178.62.244.98"
+# alias ssh-certificates="ssh root@161.35.94.17"
+# alias yii_test="docker-compose exec php ./yii_test test"
+
+alias nt="name-tab"
+alias indocker="docker-compose exec"
+
 alias n14="nvm use 14"
 alias n14dev="n14 && yarn dev"
-alias indocker="docker-compose exec"
 alias greset="git fetch && git reset --hard origin/\$(_current_branch_name)"
-alias nt="name-tab"
-alias yii_test="docker-compose exec php ./yii_test test"
 
-complete -F _gitpull_complete delete-remote-branch
+alias nukenode="rm -rf ./node_modules && npm i"
+alias nukepods="cd ios && pod deintegrate && rm -rf Podfile.lock && pod install && cd .."
+alias resetpackages="nukenode && nukepods"

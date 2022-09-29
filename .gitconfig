@@ -6,7 +6,7 @@
 	followTags = true
 [alias]
 	pull-all = !git pull && git submodule update --init --recursive
-	spush = push --recurse-submodules=on-demand
+	push-all = push --recurse-submodules=on-demand
   lgf = log --graph --topo-order --pretty='format:%C(yellow)%h%C(red)%d %Cblue%aD %Cgreenby %an%Creset -- %s'
 	sdiff = !git diff && git submodule foreach 'git diff'
 	supdate = submodule update --remote
@@ -23,3 +23,5 @@
   rebase = true
 [winUpdater]
 	recentlySeenVersion = 2.24.1.windows.2
+[init]
+	defaultBranch = main
