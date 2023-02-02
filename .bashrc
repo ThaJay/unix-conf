@@ -98,7 +98,7 @@ if [[ $OSTYPE == darwin* ]]; then
     export CLICOLOR=1
 fi
 
-export NODE_ENV='development'
+# export NODE_ENV='development'
 
 # # Windows
 # export ANDROID_HOME=C\:\\Users\\djjw\\AppData\\Local\\Android\\Sdk

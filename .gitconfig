@@ -4,6 +4,7 @@
 [push]
 	default = simple
 	followTags = true
+	autoSetupRemote = true
 [alias]
 	pull-all = !git pull && git submodule update --init --recursive
 	push-all = push --recurse-submodules=on-demand
@@ -17,7 +18,7 @@
 	ui = auto
 [core]
   excludesfile = ~/.gitignore
-	editor = "code" --wait
+	editor = \"C:\\Program Files\\VSCodium\\bin\\codium\" --wait
 	autocrlf = false
 [pull]
   rebase = true
