@@ -2,7 +2,7 @@
 *.sublime-workspace
 "Package Control.cache"/
 .vscode/
-*.code-workspace
+# *.code-workspace
 setup.cfg
 disable-csrf.py
 .vscode/settings.json
@@ -11,4 +11,4 @@ node_modules/
 .psql_history
 .wget-hsts
 .composer/
-.maester-config.env
+.dependencygraph

@@ -131,6 +131,7 @@ alias la='ls -A'
 alias l='ls -lAFh'
 alias c='cd'
 alias c.='cd ..'
+alias c..='cd ..'
 alias c-='cd -'
 alias c~='cd ~'
 alias t='tmux'
@@ -143,6 +144,7 @@ alias gp='git push'
 alias gg='git grep -i'
 alias ro='sudo su -'
 alias v='vim .'
+alias npmi='npm i'
 # alias vi='vim'
 # alias vip='vim -p'
 # alias vs='vi -S Session.vim'
@@ -181,12 +183,6 @@ alias commit-random='git commit -m "$(curl -s http://whatthecommit.com/index.txt
 alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 alias gamend="git add . && git commit --amend --no-edit && git push -f"
 
-# Maester
-# alias sshm='ssh webdev@web03.branchonline.nl'
-# alias ssh-insights="ssh root@178.62.244.98"
-# alias ssh-certificates="ssh root@161.35.94.17"
-# alias yii_test="docker-compose exec php ./yii_test test"
-
 alias nt="name-tab"
 alias indocker="docker-compose exec"
 
@@ -197,4 +193,3 @@ alias greset="git fetch && git reset --hard origin/\$(_current_branch_name)"
 alias nukenode="rm -rf ./node_modules && npm i"
 alias nukepods="cd ios && pod deintegrate && rm -rf Podfile.lock && pod install && cd .."
 alias resetpackages="nukenode && nukepods"
-alias code="codium"

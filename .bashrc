@@ -49,27 +49,30 @@ if [ -d $HOME/.bash_plugins ]; then
 fi
 
 # Set the correct locale
-# export LANG=en_GB.UTF-8
-# export LANGUAGE=en_GB.UTF-8
-# export LC_ALL=en_GB.UTF-8
+export LANG=en_GB.UTF-8
+export LANGUAGE=en_GB.UTF-8
+export LC_ALL=en_GB.UTF-8
 
 # Add the ~/bin/ and ~/.local/bin dir to $PATH
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 
 # Use a big command history
-export HISTSIZE=54321
-export HISTFILESIZE=90001
+export HISTSIZE=5432100
+export HISTFILESIZE=9000100
 
 # Set the default editor to vscode if available
-if hash code 2>/dev/null; then
-    printf "setting code as default editor\n"
-    export EDITOR=code
-    export VISUAL=code
-else
-    printf "setting vim as default editor\n"
-    export EDITOR=vim
-    export VISUAL=vim
-fi
+# if hash code 2>/dev/null; then
+#     printf "setting code as default editor\n"
+#     export EDITOR=code
+#     export VISUAL=code
+# else
+#     printf "setting vim as default editor\n"
+#     export EDITOR=vim
+#     export VISUAL=vim
+# fi
+
+export EDITOR=code
+export VISUAL=code
 
 # Don't put duplicate lines or lines starting with space in the history
 export HISTCONTROL=ignoreboth
@@ -98,28 +101,29 @@ if [[ $OSTYPE == darwin* ]]; then
     export CLICOLOR=1
 fi
 
-# export NODE_ENV='development'
+export NODE_ENV='development'
 
-# # Windows
+# Windows
 # export ANDROID_HOME=C\:\\Users\\djjw\\AppData\\Local\\Android\\Sdk
-# export ANDROID_NDK=C\:\\Users\\djjw\\AppData\\Local\\Android\\Ndk
+export ANDROID_HOME=C\:\\Users\\SKIKK\\AppData\\Local\\Android\\Sdk
+export ANDROID_NDK=C\:\\Users\\SKIKK\\AppData\\Local\\Android\\Ndk
 
 # export PATH="/opt/android-studio/bin:$PATH"
 
 # OSX
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+# export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+# export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # Git prompt
-if [ -s /usr/lib/git-core/git-sh-prompt ]; then
-    source /usr/lib/git-core/git-sh-prompt
-else
-    curl -o ~/.git-prompt.sh \
-        https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+# if [ -s /usr/lib/git-core/git-sh-prompt ]; then
+#     source /usr/lib/git-core/git-sh-prompt
+# else
+#     curl -o ~/.git-prompt.sh \
+#         https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
-    source ~/.git-prompt.sh
-fi
+#     source ~/.git-prompt.sh
+# fi
 
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
@@ -136,7 +140,8 @@ PS1="\
 \[$(tput sgr0)\]\
 \[$(tput setaf 5)\]\
 \$(__git_ps1)\
-\[$(tput setaf 4)\]\[$(tput bold)\]\$ \
+\[$(tput setaf 4)\]\[$(tput bold)\]\
+$\
 \[$(tput sgr0)\]\
 "
 
@@ -163,7 +168,3 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
