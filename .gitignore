@@ -1,11 +1,11 @@
 *.sublime-project
 *.sublime-workspace
 "Package Control.cache"/
-.vscode/
 # *.code-workspace
+.vscode/
+.vscode/settings.json
 setup.cfg
 disable-csrf.py
-.vscode/settings.json
 node_modules/
 .bash_history
 .psql_history

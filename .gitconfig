@@ -1,6 +1,6 @@
 [user]
-	email = dirk-jan@codeerbedrijf.nl
-	name = DJ
+	email = webhooks@codeerbedrijf.nl
+	name = Webhooks
 [push]
 	default = simple
 	followTags = true
@@ -13,18 +13,12 @@
 	supdate = submodule update --remote
 	quick-stats = ! /usr/local/bin/git-quick-stats
 	squash-all = "!f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
-	yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
 [color]
 	ui = auto
 [core]
   excludesfile = ~/.gitignore
-	editor = \"C:\\Program Files\\VSCodium\\bin\\codium\" --wait
 	autocrlf = false
 [pull]
   rebase = true
-[winUpdater]
-	recentlySeenVersion = 2.24.1.windows.2
 [init]
 	defaultBranch = main
-[safe]
-	directory = *
