@@ -12,8 +12,8 @@
 	sdiff = !git diff && git submodule foreach 'git diff'
 	supdate = submodule update --remote
 	quick-stats = ! /usr/local/bin/git-quick-stats
-	squash-all = "!f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
-	yolo = !git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"
+  squash-all = "!f(){ git reset $(git commit-tree HEAD^{tree} \"$@\");};f"
+	yolo = !git add . && git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\" && git push
 [color]
 	ui = auto
 [core]
