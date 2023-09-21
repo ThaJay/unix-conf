@@ -1,6 +1,6 @@
 [user]
-	email = dirk-jan@codeerbedrijf.nl
-	name = DJ
+	email = dirk-jan@lemonlabs.nl
+	name = Dirk-Jan
 [push]
 	default = simple
 	followTags = true

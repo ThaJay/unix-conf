@@ -1,14 +1,14 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "copy",
                 "singleLine": false
@@ -20,7 +20,7 @@
             "keys": "ctrl+v"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "auto",
@@ -35,13 +35,13 @@
     "defaultProfile": "{8f665945-4a02-40e4-8f3e-4c1a88524b9c}",
     "initialCols": 120,
     "initialRows": 30,
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "colorScheme": "Dark",
             "experimental.retroTerminalEffect": false,
-            "font": 
+            "font":
             {
                 "face": "Fira Code",
                 "size": 14.0,
@@ -51,7 +51,7 @@
             "opacity": 75,
             "useAcrylic": true
         },
-        "list": 
+        "list":
         [
             {
                 "adjustIndistinguishableColors": "always",
@@ -61,7 +61,7 @@
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageOpacity": 0.1,
                 "backgroundImageStretchMode": "none",
-                "bellStyle": 
+                "bellStyle":
                 [
                     "audible",
                     "window",
@@ -73,7 +73,7 @@
                 "cursorColor": "#808080",
                 "cursorShape": "filledBox",
                 "experimental.retroTerminalEffect": false,
-                "font": 
+                "font":
                 {
                     "face": "Fira Code",
                     "size": 16.0
@@ -87,7 +87,7 @@
                 "opacity": 80,
                 "padding": "8",
                 "snapOnInput": true,
-                "startingDirectory": "C:\\dev\\codeerbedrijf",
+                "startingDirectory": "C:\\dev",
                 "useAcrylic": true
             },
             {
@@ -102,7 +102,7 @@
                 "cursorColor": "#808080",
                 "cursorHeight": 25,
                 "cursorShape": "vintage",
-                "font": 
+                "font":
                 {
                     "face": "Fira Code",
                     "size": 16.0
@@ -125,7 +125,7 @@
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageOpacity": 0.1,
                 "backgroundImageStretchMode": "none",
-                "bellStyle": 
+                "bellStyle":
                 [
                     "audible",
                     "window",
@@ -136,7 +136,7 @@
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "filledBox",
                 "experimental.retroTerminalEffect": false,
-                "font": 
+                "font":
                 {
                     "face": "Fira Code",
                     "size": 16.0
@@ -159,7 +159,7 @@
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageOpacity": 0.1,
                 "backgroundImageStretchMode": "none",
-                "bellStyle": 
+                "bellStyle":
                 [
                     "audible",
                     "window",
@@ -171,7 +171,7 @@
                 "cursorShape": "filledBox",
                 "elevate": true,
                 "experimental.retroTerminalEffect": true,
-                "font": 
+                "font":
                 {
                     "face": "Fira Code",
                     "size": 16.0
@@ -193,11 +193,11 @@
                 "hidden": false,
                 "name": "Ubuntu",
                 "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
-                "startingDirectory": "C:\\dev\\codeerbedrijf"
+                "startingDirectory": "C:\\dev"
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
             "background": "#0C0C0C",
