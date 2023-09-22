@@ -29,7 +29,7 @@ ln -s $PWD/.tern-project ~/.tern-project
 printf "    Symlink created to .tern-project\n"
 ln -s $PWD/.dircolors ~/.dircolors
 printf "    Symlink created to .dircolors\n"
-ln -s $PWD/.dircolors ~/.eslintrc.js
+ln -s $PWD/.eslintrc.js ~/.eslintrc.js
 printf "    Symlink created to .eslintrc.js\n\n"
 ln -s $PWD/.tmux.conf ~/.tmux.conf.local
 printf "    Symlink created to .tmux.conf.local\n"
