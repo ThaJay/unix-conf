@@ -32,11 +32,11 @@ if ! shopt -oq posix; then
 fi
 
 # # Init bash completion from local if ever needed?
-# if [ -f /usr/local/etc/bash_completion ]; then
-#     . /usr/local/etc/bash_completion
-# elif [ -f /etc/bash_completion ]; then
-#     . /etc/bash_completion
-# fi
+if [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
+elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
 
 # Load possible bash plugins from the ~/.bash_plugins/ dir
 if [ -d $HOME/.bash_plugins ]; then
@@ -71,8 +71,8 @@ export HISTFILESIZE=9000100
 #     export VISUAL=vim
 # fi
 
-export EDITOR=code
-export VISUAL=code
+# export EDITOR=code
+# export VISUAL=code
 
 # Don't put duplicate lines or lines starting with space in the history
 export HISTCONTROL=ignoreboth
@@ -87,7 +87,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # Disable the bell
-set bell-style none
+# set bell-style none
 
 # Linux specific settings
 if [[ $OSTYPE == linux* ]]; then
@@ -97,16 +97,16 @@ if [[ $OSTYPE == linux* ]]; then
 fi
 
 # OS X specific settings
-if [[ $OSTYPE == darwin* ]]; then
-    export CLICOLOR=1
-fi
+# if [[ $OSTYPE == darwin* ]]; then
+#     export CLICOLOR=1
+# fi
 
 export NODE_ENV='development'
 
 # Windows
 # export ANDROID_HOME=C\:\\Users\\djjw\\AppData\\Local\\Android\\Sdk
-export ANDROID_HOME=C\:\\Users\\SKIKK\\AppData\\Local\\Android\\Sdk
-export ANDROID_NDK=C\:\\Users\\SKIKK\\AppData\\Local\\Android\\Ndk
+# export ANDROID_HOME=C\:\\Users\\SKIKK\\AppData\\Local\\Android\\Sdk
+# export ANDROID_NDK=C\:\\Users\\SKIKK\\AppData\\Local\\Android\\Ndk
 
 # export PATH="/opt/android-studio/bin:$PATH"
 
@@ -116,14 +116,16 @@ export ANDROID_NDK=C\:\\Users\\SKIKK\\AppData\\Local\\Android\\Ndk
 # export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # Git prompt
-# if [ -s /usr/lib/git-core/git-sh-prompt ]; then
-#     source /usr/lib/git-core/git-sh-prompt
-# else
-#     curl -o ~/.git-prompt.sh \
-#         https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+if [ -s /usr/lib/git-core/git-sh-prompt ]; then
+    source /usr/lib/git-core/git-sh-prompt
+else
+  if [ ! -s ~/.git-prompt.sh ]; then
+    curl -o ~/.git-prompt.sh \
+        https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+  fi
 
-#     source ~/.git-prompt.sh
-# fi
+    source ~/.git-prompt.sh
+fi
 
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"

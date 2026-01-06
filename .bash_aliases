@@ -140,8 +140,16 @@ alias tmp='tmux saveb -'
 alias rm='rm -i'
 alias gf='git fetch'
 alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit -m'
 alias gp='git push'
 alias gg='git grep -i'
+alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
+alias wip='gitwip'
+alias commit-random='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"'
+alias gamend="git add . && git commit --amend --no-edit && git push -f"
+alias greset="git fetch && git reset --hard origin/\$(_current_branch_name)"
 alias ro='sudo su -'
 alias v='vim .'
 alias npmi='npm i'
@@ -178,17 +186,12 @@ alias yadD="yarn add -D"
 # alias django-testk='docker/manage.sh test --parallel 4 --keepdb'
 # alias django-testfk='docker/manage.sh test --parallel 4 --failfast --keepdb'
 
-alias wip='gitwip'
-alias commit-random='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"'
-alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
-alias gamend="git add . && git commit --amend --no-edit && git push -f"
 
 alias nt="name-tab"
 alias indocker="docker-compose exec"
 
 alias n14="nvm use 14"
 alias n14dev="n14 && yarn dev"
-alias greset="git fetch && git reset --hard origin/\$(_current_branch_name)"
 
 alias nukenode="rm -rf ./node_modules && npm i"
 alias nukepods="cd ios && pod deintegrate && rm -rf Podfile.lock && pod install && cd .."
